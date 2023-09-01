@@ -944,6 +944,7 @@ body p {
 
 .hero {
   height: calc(100vh - 70px);
+  background: #000000;
 }
 .hero .container,
 .hero .container .col-lg-6 {
