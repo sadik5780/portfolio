@@ -1,0 +1,28 @@
+{
+  "homepage": "website-url",
+  "name": "sadik",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@splidejs/react-splide": "^0.7.12",
+    "animate.css": "^4.1.1",
+    "aos": "^2.3.4",
+    "axios": "^1.4.0",
+    "bootstrap": "^5.3.0",
+    "dateformat": "^5.0.3",
+    "eslint": "8.42.0",
+    "eslint-config-next": "13.4.5",
+    "next": "13.4.5",
+    "next-image-export-optimizer": "^1.7.0",
+    "nprogress": "^0.2.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-paginate": "^8.2.0"
+  }
+}
