@@ -17,7 +17,7 @@
   --lightGrayColor5: #f7f7f7;
 }
 body {
-  background: #000000;
+  background: #000000  !important;
   color: #fff;
   font-family: "Poppins", sans-serif !important;
   font-weight: 400;
@@ -944,7 +944,7 @@ body p {
 
 .hero {
   height: calc(100vh - 70px);
-  background: #000000;
+  background: #000000 !important;
 }
 .hero .container,
 .hero .container .col-lg-6 {
