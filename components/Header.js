@@ -49,7 +49,7 @@ export default function Header() {
                 //   delay: 0.5,
                 //   ease: [0, 0.71, 0.2, 1.01],
                 // }}
-                className="res_menu animate__animated animate__fadeInRight"
+                className="res_menu animate__animated animate__fadeInDown"
               >
                 <div className="close_btn" onClick={handleMenuBar}></div>
                 <ul>

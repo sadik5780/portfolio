@@ -8,7 +8,7 @@
 }
 @media screen and (max-width: 580px) {
   .hero_page .hero_text_wrapper {
-    padding: 100px 10px !important;
+    padding: 30px 10px !important;
   }
   .hero_page .hero_text_wrapper .main_text {
     font-size: 40px !important;
@@ -21,7 +21,7 @@
 }
 @media screen and (max-width: 480px) {
   .hero_page .hero_text_wrapper {
-    padding: 100px 10px !important;
+    padding: 30px 10px !important;
   }
   .hero_page .hero_text_wrapper .main_text {
     font-size: 40px !important;
@@ -36,7 +36,7 @@
 }
 @media screen and (max-width: 420px) {
   .hero_page .hero_text_wrapper {
-    padding: 100px 10px !important;
+    padding: 30px 10px !important;
   }
   .hero_page .hero_text_wrapper .main_text {
     font-size: 40px !important;
@@ -48,7 +48,7 @@
 }
 @media screen and (max-width: 360px) {
   .hero_page .hero_text_wrapper {
-    padding: 100px 10px !important;
+    padding: 30px 10px !important;
   }
   .hero_page .hero_text_wrapper .main_text {
     font-size: 40px !important;
@@ -56,5 +56,8 @@
   }
   .hero_page .hero_text_wrapper .desc {
     margin-bottom: 40px !important;
+  }
+  .hero_page .hero_projects_slider .splide{
+    margin: 20px 0 !important;
   }
 }

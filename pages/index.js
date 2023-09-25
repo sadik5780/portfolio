@@ -82,7 +82,7 @@ export default function Home() {
               arrows: true,
               pagination: false,
               focus: 0,
-              perPage: 5,
+              perPage: 4,
               perMove: 1,
               autoScroll: {
                 pauseOnHover: true,
@@ -90,13 +90,24 @@ export default function Home() {
                 rewind: true,
                 speed: 0.0,
               },
+              breakpoints: {
+                1920: { perPage: 4, gap: '1rem' },
+                1366: { perPage: 4, gap: '1rem' },
+                991: { perPage: 4, gap: '1rem' },
+                768: { perPage: 3, gap: '1rem' },
+                580: { perPage: 3, gap: '1rem' },
+                520: { perPage: 2, gap: '1rem' },
+                480: { perPage: 2, gap: '1rem' },
+                420: { perPage: 2, gap: '1rem' },
+                360: { perPage: 2, gap: '1rem' },
+              },
             }}
             extensions={{ AutoScroll }}
           >
             <SplideSlide>
               <div className="project_item">
                 <div className="project_overlay"></div>
-                <img src="../images/1.jpg" alt="Image 1" />
+                <img src="../images/1.jpg" alt="Dulheraja" />
                 <div className="project_text_wrapper">
                   <p className="project_name">DulheRaja, Bhopal</p>
                   <div className="project_tech">
@@ -112,7 +123,7 @@ export default function Home() {
             <SplideSlide>
               <div className="project_item">
                 <div className="project_overlay"></div>
-                <img src="../images/shoeb.png" alt="Image 2" />
+                <img src="../images/shoeb.png" alt="Shoeb Mashadi" />
                 <div className="project_text_wrapper">
                   <p className="project_name">Shoeb Mashadi</p>
                   <p className="project_tech">
@@ -128,7 +139,7 @@ export default function Home() {
             <SplideSlide>
               <div className="project_item">
                 <div className="project_overlay"></div>
-                <img src="../images/priyanka.png" alt="Image 3" />
+                <img src="../images/priyanka.png" alt="Priyanka Kumari" />
                 <div className="project_text_wrapper">
                   <p className="project_name">Priyanka Kumari</p>
                   <p className="project_tech">
@@ -137,6 +148,50 @@ export default function Home() {
                     <span>Bootstrap</span>
                     <span>Animate</span>
                     <span>FancyBox</span>
+                  </p>
+                </div>
+              </div>
+            </SplideSlide>
+            <SplideSlide>
+              <div className="project_item">
+                <div className="project_overlay"></div>
+                <img src="../images/punjab.jpg" alt="New Punjab Hotel" />
+                <div className="project_text_wrapper">
+                  <p className="project_name">New Punjab Hotel</p>
+                  <p className="project_tech">
+                    <span>PHP</span>
+                    <span>AOS</span>
+                    <span>Bootstrap</span>
+                    <span>Animate</span>
+                    <span>JQuery</span>
+                  </p>
+                </div>
+              </div>
+            </SplideSlide>
+            <SplideSlide>
+              <div className="project_item">
+                <div className="project_overlay"></div>
+                <img src="../images/topbarter.jpg" alt="Image 6" />
+                <div className="project_text_wrapper">
+                  <p className="project_name">TopBarter</p>
+                  <p className="project_tech">
+                    <span>NextJS</span>
+                    <span>NodeJS</span>
+                    <span>Strapi CMS</span>
+                  </p>
+                </div>
+              </div>
+            </SplideSlide>
+            <SplideSlide>
+              <div className="project_item">
+                <div className="project_overlay"></div>
+                <img src="../images/energen.jpg" alt="Image 6" />
+                <div className="project_text_wrapper">
+                  <p className="project_name">Energen Global FZC</p>
+                  <p className="project_tech">
+                    <span>Javascript</span>
+                    <span>HTML5</span>
+                    <span>CSS3</span>
                   </p>
                 </div>
               </div>
@@ -153,8 +208,8 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-            </SplideSlide>
-            <SplideSlide>
+            </SplideSlide> */}
+            {/*    <SplideSlide>
               <div className="project_item">
                 <div className="project_overlay"></div>
                 <img src="../images/1.jpg" alt="Image 5" />
@@ -167,19 +222,7 @@ export default function Home() {
                 </div>
               </div>
             </SplideSlide>
-            <SplideSlide>
-              <div className="project_item">
-                <div className="project_overlay"></div>
-                <img src="../images/1.jpg" alt="Image 6" />
-                <div className="project_text_wrapper">
-                  <p className="project_name">TopBarter</p>
-                  <p className="project_tech">
-                    <span>tech1</span>
-                    <span>tech1</span>
-                  </p>
-                </div>
-              </div>
-            </SplideSlide> */}
+            */}
           </Splide>
         </div>
       </div>
