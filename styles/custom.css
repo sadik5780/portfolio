@@ -1,5 +1,7 @@
 /* {Google Font Montserrate | 300,400,500,600,700} */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+/* {Google Font Raleway | 300,400,500,600,700} */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
 
 * {
   margin: 0;
@@ -16,7 +18,8 @@
 }
 body {
   background-color: #fff;
-  font-family: "Montserrat", sans-serif !important;
+  /* font-family: "Montserrat", sans-serif !important; */
+  font-family: 'Raleway', sans-serif !important;
 }
 a {
   text-decoration: none;
