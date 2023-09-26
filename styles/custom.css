@@ -1,7 +1,11 @@
 /* {Google Font Montserrate | 300,400,500,600,700} */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
 /* {Google Font Raleway | 300,400,500,600,700} */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+
+/* {Google Font Raleway | 400,700} */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
 
 * {
   margin: 0;
@@ -19,7 +23,9 @@
 body {
   background-color: #fff;
   /* font-family: "Montserrat", sans-serif !important; */
-  font-family: 'Raleway', sans-serif !important;
+  /* font-family: 'Raleway', sans-serif !important; */
+  font-family: 'Courier Prime', monospace !important;
+  /* word-spacing: -13px; */
 }
 a {
   text-decoration: none;
@@ -64,6 +70,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 20px 0;
 }
 
 .header .nav_wrapper .logo_wrapper {
@@ -203,7 +210,7 @@ ul {
 }
 .hero_page .hero_text_wrapper {
   text-align: center;
-  padding: 10% 0 0%;
+  padding: 8% 0 0%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -270,7 +277,7 @@ ul {
   /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-radius: 30px;
+  border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   height: 250px;
   cursor: pointer;
@@ -296,8 +303,8 @@ ul {
   /* background:linear-gradient(to top,  #000000d6 0%, #ffffff00 30%) ; */
   background: linear-gradient(
     180deg,
-    transparent 10%,
-    rgba(0, 0, 0, 0.3) 75.88%
+    transparent 20%,
+    rgba(0, 0, 0, 0.7) 80%
   );
   z-index: 2;
 }
@@ -347,5 +354,6 @@ ul {
   border: 1px solid var(--tertiary-color-fff5bb);
   margin: 5px 5px 0px 0;
   padding: 2px 5px;
+  /* background-color: #006666; */
 }
 /* Landing Page Styling End */

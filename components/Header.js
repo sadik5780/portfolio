@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <>
       <div className="header">
-        <div className="container-fluid">
+        <div className="container">
           <div className="nav_wrapper">
             <div className="logo_wrapper">
               <Link href="/">Sadik</Link>
