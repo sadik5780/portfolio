@@ -17,6 +17,9 @@
   .hero_page .hero_text_wrapper .desc {
     margin-bottom: 40px !important;
   }
+  .header .nav_wrapper .logo_wrapper {
+    width: 50px !important;
+  }
   
 }
 @media screen and (max-width: 480px) {

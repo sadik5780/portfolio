@@ -21,6 +21,7 @@ export default function Home() {
     <>
       <Head>
         <title>Sadik Shaikh</title>
+        <link rel="icon" href="./images/favicon.png" sizes="any" />
         <meta name="robots" content="index, follow" />
         <meta name="description" content="" />
         <link rel="canonical" href="https://sadikshaikh.com/" />

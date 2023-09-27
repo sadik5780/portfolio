@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import 'animate.css';
+import "animate.css";
 import { motion } from "framer-motion";
 
 export default function Header() {
@@ -20,7 +20,29 @@ export default function Header() {
         <div className="container">
           <div className="nav_wrapper">
             <div className="logo_wrapper">
-              <Link href="/">Sadik</Link>
+              <Link href="/">
+                {/* <img src="../images/logo.png" alt="" /> */}
+                {/* <picture>
+                  <source
+                    media="(max-width: 1024px)"
+                    srcSet="../images/logo.png"
+                  />
+                  <source
+                    media="(max-width: 768px)"
+                    srcSet="../images/logo.png"
+                  />
+                  <source
+                    media="(max-width: 580px)"
+                    srcSet="../images/logo2.png"
+                  />
+                  <img src="../images/logo.png" alt="Sadik Portfolio Logo" />
+                </picture> */}
+                <picture>
+                  <source media="(max-width:580px)" srcSet="../images/logo2.png" className="logo2"/>
+                  <source media="(min-width:768px)" srcSet="../images/logo.png" />
+                  <img src="../images/logo.png" alt="Logo" className="logo"/>
+                </picture>
+              </Link>
             </div>
             <div className="menu_wrapper">
               <ul>
@@ -30,7 +52,7 @@ export default function Header() {
                 <li>
                   <Link href="/projects">Projects</Link>
                 </li>
-                <li>
+                <li className="contact_cta_btn">
                   <Link href="/contact">Let's Talk</Link>
                 </li>
               </ul>
@@ -43,7 +65,7 @@ export default function Header() {
             {menubar && (
               <motion.div
                 // animate={{ y: 100 }}
-                // initial={false} 
+                // initial={false}
                 // transition={{
                 //   duration: 0.8,
                 //   delay: 0.5,

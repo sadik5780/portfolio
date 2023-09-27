@@ -7,13 +7,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import '@/styles/responsive.css'; 
 import 'animate.css';
 import '@/styles/custom.css'; 
+import Head from "next/head";
 
 
 export default function App({ Component }) 
 {
       
     return (
-        <>
+        <> 
         <Layout>
             <Component />
         </Layout>
