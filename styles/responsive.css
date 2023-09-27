@@ -20,7 +20,10 @@
   .header .nav_wrapper .logo_wrapper {
     width: 50px !important;
   }
-  
+  .cx-btn-1 {
+    padding: 10px;
+    width: 100%;
+  }
 }
 @media screen and (max-width: 480px) {
   .hero_page .hero_text_wrapper {
@@ -33,7 +36,7 @@
   .hero_page .hero_text_wrapper .desc {
     margin-bottom: 40px !important;
   }
-  .hero_page .hero_text_wrapper .cx-btn-1{
+  .hero_page .hero_text_wrapper .cx-btn-1 {
     width: 100%;
   }
 }
@@ -60,7 +63,14 @@
   .hero_page .hero_text_wrapper .desc {
     margin-bottom: 40px !important;
   }
-  .hero_page .hero_projects_slider .splide{
+  .hero_page .hero_projects_slider .splide {
     margin: 20px 0 !important;
+  }
+  .cx-btn-1 {
+    padding: 10px !important;
+    /* width: 100%; */
+  }
+  .hero_page .hero_projects_slider .splide__slide .project_item {
+    height: 280px !important;
   }
 }
