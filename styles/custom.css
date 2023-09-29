@@ -113,7 +113,7 @@ ul {
 .header .nav_wrapper .menu_wrapper ul li a {
   color: var(--primary-color-006666);
   font-size: 15px;
-  padding: 5px 15px;
+  padding: 8px 15px;
   transition: all 0.3s ease-in-out;
   border: 1px solid transparent;
   border-radius: 20px;
@@ -285,7 +285,7 @@ ul {
   animation-duration: 1.5s;
 }
 .hero_page .hero_projects_slider .splide {
-  margin: 40px 0 20px;
+  margin: 120px 0 20px;
 }
 /* .splide__pagination{
   display: none !important;

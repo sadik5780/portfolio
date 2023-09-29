@@ -30,7 +30,7 @@ function projects() {
           src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
         />
       </Head>
-      <div>Contact Me</div>
+      <div>Projects</div>
     </>
   );
 }

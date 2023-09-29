@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import '@/styles/responsive.css'; 
 import 'animate.css';
 import '@/styles/custom.css'; 
+import '@/styles/contact.css'; 
 import Head from "next/head";
 
 
