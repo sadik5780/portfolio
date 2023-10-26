@@ -70,13 +70,13 @@ function Contact() {
                 <span>
                   <img src="/icon/email.png" alt="" />
                 </span> 
-                : sadik5780@gmail.com
+                 &nbsp; sadik5780@gmail.com
               </p>
               <p>
                 <span>
                   <img src="/icon/phone.png" alt="" />
                 </span> 
-                : 77 0909 5899
+                &nbsp; 77 0909 5899
               </p>
             </div>
             <h6 className="social_title">Follow me on:</h6>
