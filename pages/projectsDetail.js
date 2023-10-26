@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import data from "../data.json";
 import Link from "next/link";
 
-function projects() {
+function projectsDetail() {
   const [imageData, setImageData] = useState([]);
   // console.log(data[0].images);
   useEffect(() => {
@@ -39,14 +39,15 @@ function projects() {
         />
       </Head>
       <div className="container">
-        <div className="row">
+      <div className="row">
           {imageData?.map((item, index) => {
             console.log(item);
             return (
               <>
                 <div className="col-md-4">
                   <Link href="/projectsDetail">
-                  <img src={item.images[index]} alt="" className="img-fluid" />
+                  <img src={item.images[0]} alt="" className="img-fluid" />
+                  <p>Lorem222</p>
                   </Link>
                 </div>
               </>
@@ -58,4 +59,4 @@ function projects() {
   );
 }
 
-export default projects;
+export default projectsDetail;

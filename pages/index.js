@@ -7,17 +7,10 @@ import Link from "next/link";
 import Script from "next/script";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
-import { clarity } from "react-microsoft-clarity";
 
 export default function Home() {
   useEffect(() => {
     AOS.init();
-    const config = {
-      id: "jgj8weuzrm",
-      domain: "https://portfolio-xuj8-sadik5780.vercel.app/",
-    };
-
-    clarity(config);
   }, []);
   const [menubar, setMenubar] = useState(false);
   const handleMenuBar = () => {
@@ -43,13 +36,13 @@ export default function Home() {
         <meta name="twitter:data1" content="1 minute" />
 
         <Script
-          type="noModule"
+          type="module"
           src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-        />
+        ></Script>
         <Script
           noModule
           src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-        />
+        ></Script>
       </Head>
       <div className="hero_page">
         <div className="container">

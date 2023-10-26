@@ -1,3 +1,4 @@
+
 @media screen and (max-width: 768px) {
   .menu_btn {
     display: flex !important;
@@ -51,6 +52,7 @@
   .hero_page .hero_text_wrapper .desc {
     margin-bottom: 40px !important;
   }
+  
 }
 @media screen and (max-width: 360px) {
   .hero_page .hero_text_wrapper {

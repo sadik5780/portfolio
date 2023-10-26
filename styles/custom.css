@@ -51,7 +51,8 @@ ul {
   transition: all 0.3s ease-in-out;
 }
 
-.cx-btn-1:hover {
+.cx-btn-1:hover,
+.cx-btn-1:focus {
   background-color: var(--primary-color-006666);
   color: #fff;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -237,7 +238,7 @@ ul {
 }
 .hero_page .hero_text_wrapper {
   text-align: center;
-  padding: 8% 0 0%;
+  padding: 60px 0 0%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -246,7 +247,7 @@ ul {
 }
 .hero_page .hero_text_wrapper .top_text {
   color: var(--primary-color-006666);
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   animation-delay: 0.2s;
   animation-duration: 0.8s;
 }
@@ -285,7 +286,7 @@ ul {
   animation-duration: 1.5s;
 }
 .hero_page .hero_projects_slider .splide {
-  margin: 120px 0 20px;
+  margin: 90px 0 20px;
 }
 /* .splide__pagination{
   display: none !important;
@@ -374,10 +375,137 @@ ul {
   .project_tech
   span {
   border-radius: 5px;
-  border: 1px solid var(--tertiary-color-fff5bb);
+  /* border: 1px solid var(--tertiary-color-fff5bb); */
   margin: 5px 5px 0px 0;
   padding: 2px 5px;
   letter-spacing: 1px;
-  background-color: #0066665a;
+  background-color: #00666693;
+  /* background-color: #006666; */
 }
 /* Landing Page Styling End */
+
+/* Contact Page Styling Start */
+
+.contact_text_wrapper {
+  padding: 50px 0;
+  height: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+.contact_text_wrapper .title {
+  color: #006666;
+}
+.contact_text_wrapper .social_title {
+  font-size: 20px;
+  color: #006666;
+  margin-bottom: 20px;
+}
+.contact_text_wrapper .cont_details {
+  padding: 50px 0;
+}
+.contact_text_wrapper .cont_details p {
+  margin-bottom: 25px;
+}
+.contact_text_wrapper .cont_details p:last-child {
+  margin-bottom: 0;
+}
+.contact_text_wrapper .cont_details p span {
+  border-radius: 5px;
+  background-color: #006666;
+  letter-spacing: 1px;
+  color: #fff;
+  padding: 10px;
+}
+.contact_text_wrapper .cont_details p span img {
+  width: 22px;
+}
+.contact_text_wrapper .social_wrapper {
+}
+.contact_text_wrapper .social_wrapper span {
+  border-radius: 50%;
+  background-color: #006666;
+  letter-spacing: 1px;
+  color: #fff;
+  padding: 10px 7px;
+  margin-right: 10px;
+}
+.contact_text_wrapper .social_wrapper span:hover {
+  transform: rotate(90deg);
+}
+.contact_text_wrapper .social_wrapper span img {
+  width: 25px;
+}
+
+.form_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 50px;
+  border-radius: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.form_wrapper form {
+  width: 100%;
+}
+.form_wrapper form .form-control {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #006666;
+}
+.form_wrapper form .form-control::placeholder {
+  transition: all 0.3s ease;
+  opacity: 0.3;
+  color: #006666;
+}
+.form_wrapper form .form-control:focus {
+  box-shadow: none;
+}
+.form-control:invalid:focus,
+.form-control:valid:focus {
+  box-shadow: none !important;
+}
+.form_wrapper form .form-control:focus::placeholder {
+  opacity: 0.1;
+}
+.form_wrapper form label {
+  color: #006666;
+}
+
+.form_wrapper .form_title {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #006666;
+}
+
+@media screen and (max-width: 991px) {
+  .form_wrapper {
+    /* height: 100vh; */
+  }
+}
+@media screen and (max-width: 768px) {
+  .form_wrapper {
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .form_wrapper {
+    padding: 20px 30px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .form_wrapper {
+    padding: 20px 30px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .form_wrapper {
+    padding: 20px 30px;
+    margin-bottom: 20px;
+  }
+}
+/* Contact Page Styling End */

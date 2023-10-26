@@ -3,12 +3,25 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import "animate.css";
 import { motion } from "framer-motion";
+import { useRouter } from 'next/router';
 
 export default function Header() {
+  const router = useRouter();
   const [menubar, setMenubar] = useState(false);
   const handleMenuBar = () => {
     setMenubar(!menubar);
   };
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setMenubar(false);
+    };
+
+    router.events.on('routeChangeComplete', handleRouteChange);
+
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router]);
 
   // function handleMenuBar() {
   //     document.querySelector('.main-sidebarmenu').classList.toggle('main-sidebarmenu-active')
@@ -71,7 +84,7 @@ export default function Header() {
                 //   delay: 0.5,
                 //   ease: [0, 0.71, 0.2, 1.01],
                 // }}
-                className="res_menu animate__animated animate__fadeInDown"
+                className="res_menu animate__animated animate__fadeInRight"
               >
                 <div className="close_btn" onClick={handleMenuBar}></div>
                 <ul>
