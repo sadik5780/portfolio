@@ -7,10 +7,17 @@ import Link from "next/link";
 import Script from "next/script";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+import { clarity } from "react-microsoft-clarity";
 
 export default function Home() {
   useEffect(() => {
     AOS.init();
+    const config = {
+      id: "jgj8weuzrm",
+      domain: "https://portfolio-xuj8-sadik5780.vercel.app/",
+    };
+
+    clarity(config);
   }, []);
   const [menubar, setMenubar] = useState(false);
   const handleMenuBar = () => {
@@ -92,15 +99,15 @@ export default function Home() {
                 speed: 0.0,
               },
               breakpoints: {
-                1920: { perPage: 4, gap: '1rem' },
-                1366: { perPage: 4, gap: '1rem' },
-                991: { perPage: 4, gap: '1rem' },
-                768: { perPage: 3, gap: '1rem' },
-                580: { perPage: 3, gap: '1rem' },
-                520: { perPage: 2, gap: '1rem' },
-                480: { perPage: 2, gap: '1rem' },
-                420: { perPage: 2, gap: '1rem' },
-                360: { perPage: 2, gap: '1rem' },
+                1920: { perPage: 4, gap: "1rem" },
+                1366: { perPage: 4, gap: "1rem" },
+                991: { perPage: 4, gap: "1rem" },
+                768: { perPage: 3, gap: "1rem" },
+                580: { perPage: 3, gap: "1rem" },
+                520: { perPage: 2, gap: "1rem" },
+                480: { perPage: 2, gap: "1rem" },
+                420: { perPage: 2, gap: "1rem" },
+                360: { perPage: 2, gap: "1rem" },
               },
             }}
             extensions={{ AutoScroll }}

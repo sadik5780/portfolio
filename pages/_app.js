@@ -34,6 +34,7 @@ export default function App({ Component }) {
   return (
     <>
       <Script src="/path/to/your/script.js" strategy="lazyOnload" />
+      
       <Layout>
         <Component />
       </Layout>

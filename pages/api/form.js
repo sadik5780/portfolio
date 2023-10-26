@@ -2,8 +2,7 @@ require("dotenv").config();
 import nodemailer from "nodemailer";
 
 export default async (req, res) => {
-  const { name, email, message } = req.body;
-  console.log(process.env.EMAIL_USER, process.env.EMAIL_PASS, ">>>>>");
+  const { name, email, message } = req.body; 
 
   const transporter = nodemailer.createTransport({
     port: 465,
