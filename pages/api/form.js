@@ -1,32 +1,34 @@
-const nodemailer = require('nodemailer');
+require("dotenv").config();
+import nodemailer from "nodemailer";
 
-module.exports = async (req, res) => {
+export default async (req, res) => {
   const { name, email, message } = req.body;
-  // const user = process.env.NODEMAILER_EMAIL;
-  const user = "sadik5780@gmail.com";
+  console.log(process.env.EMAIL_USER, process.env.EMAIL_PASS, ">>>>>");
 
   const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
     port: 465,
-    secure: true,
+    host: "smtp.gmail.com",
     auth: {
-      user,
-      pass: "xahomjwpfhsrwkeb",
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
     },
+    secure: true,
   });
 
+  const mailData = {
+    from: email,
+    to: "sadik5780@gmail.com", // Update with your actual email
+    subject: `Message From ${name}`,
+    text: message + " | Sent from: " + email,
+    html: `<div>${message}</div><p>Sent from: ${email}</p>`,
+  };
+
   try {
-    await transporter.sendMail({
-      from: email,
-      to: user,
-      subject: `Contact form submission from ${name}`,
-      html: `<p>You have a contact form submission</p><br>
-        <p><strong>Email: </strong> ${email}</p><br>
-        <p><strong>Message: </strong> ${message}</p><br>
-      `,
-    });
-    return res.status(200).json({ error: '' });
-  } catch (error) {
-    return res.status(500).json({ error: error.message || error.toString() });
+    const info = await transporter.sendMail(mailData);
+    console.log("Email sent:", info.response);
+    res.status(200).json({ success: true });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Internal Server Error");
   }
 };

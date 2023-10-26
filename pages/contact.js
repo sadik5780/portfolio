@@ -1,100 +1,130 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
+import React, { useState } from "react";
+import Head from "next/head";
+import { FloatingLabel, Form } from "react-bootstrap";
+import InputGroup from "react-bootstrap/InputGroup";
+import Button from "react-bootstrap/Button"; 
 
-function Contact() {
-  const [inputs, setInputs] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+function Contact() { 
+  const [validated, setValidated] = useState(false);
 
-  const [form, setForm] = useState({
-    state: '',
-    message: '',
-  });
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [number, setNumber] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (e) => {
-    setInputs((prev) => ({
-      ...prev,
-      [e.target.id]: e.target.value,
-    }));
+  const handleSubmit = (e) => {
+    const form = e.currentTarget;
+    if (form.checkValidity() === false) {
+      e.preventDefault();
+      e.stopPropagation();
+    } else {
+      handleFormSubmit(e);
+    }
+
+    setValidated(true);
   };
 
-  const onSubmitForm = async (e) => {
+  const handleFormSubmit = (e) => {
     e.preventDefault();
+    let data = {
+      name,
+      email,
+      number,
+      message,
+    };
 
-    if (inputs.name && inputs.email && inputs.message) {
-      setForm({ state: 'loading', message: 'Sending....' });
-
-      try {
-        const res = await fetch('/api/form', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(inputs),
-        });
-
-        const data = await res.json();
-
-        if (data.error) {
-          setForm({ state: 'error', message: data.error });
-        } else {
-          setForm({
-            state: 'success',
-            message: 'Your message was sent successfully.',
-          });
-          setInputs({ name: '', email: '', message: '' });
-        }
-      } catch (error) {
-        setForm({ state: 'error', message: 'Something went wrong' });
-      }
-    }
+    fetch("/api/form", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => {
+        console.log("Response received");
+        // if (res.status === 200) {
+          console.log("Response succeeded!");
+          setSubmitted(true);
+          navigate("/thank_you");
+        // }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   };
 
   return (
-    <>
-      <Head>
-        <title>Contact Me | Sadik Shaikh</title>
-        {/* Add your meta tags and other head elements here */}
-      </Head>
-      <div className="container">
-        <form className="form" onSubmit={onSubmitForm}>
-          <input
-            id="name"
-            type="text"
-            value={inputs.name}
-            onChange={handleChange}
-            className="inputField"
-            placeholder="Name"
+    <div className="container">
+      <Form noValidate validated={validated} onSubmit={handleSubmit}>
+        <Form.Group controlId="validationCustom01">
+          <Form.Label>Name</Form.Label>
+          <Form.Control
             required
+            type="text"
+            placeholder="Enter your name"
+            defaultValue={name}
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
           />
-          <input
-            id="email"
+          <Form.Control.Feedback type="invalid">
+            Please enter your name here.
+          </Form.Control.Feedback>
+        </Form.Group>
+
+        <Form.Group controlId="validationCustom01">
+          <Form.Label>Email</Form.Label>
+          <Form.Control
+            required
             type="email"
-            value={inputs.email}
-            onChange={handleChange}
-            className="inputField"
-            placeholder="Email"
-            required
+            placeholder="Enter your email"
+            defaultValue={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
           />
-          <textarea
-            id="message"
-            type="text"
-            value={inputs.message}
-            onChange={handleChange}
-            className="inputField"
-            placeholder="Message"
-            rows="5"
+          <Form.Control.Feedback type="invalid">
+            Please enter correct email id.
+          </Form.Control.Feedback>
+        </Form.Group>
+
+        <Form.Group controlId="validationCustom01">
+          <Form.Label>Mobile Number</Form.Label>
+          <Form.Control
             required
+            type="tel"
+            placeholder="Enter your contact number"
+            defaultValue={number}
+            onChange={(e) => {
+              setNumber(e.target.value);
+            }}
           />
-          <input type="submit" className="button" />
-        </form>
-        {form.state === 'loading' && <div>Sending....</div>}
-        {form.state === 'error' && <div>{form.message}</div>}
-        {form.state === 'success' && <div>Sent successfully</div>}
-      </div>
-    </>
+          <Form.Control.Feedback type="invalid">
+            Please enter correct email id.
+          </Form.Control.Feedback>
+        </Form.Group>
+
+        <Form.Group controlId="validationCustom01">
+          <Form.Label>Message</Form.Label>
+          <Form.Control
+            as="textarea"
+            rows={3}
+            required
+            defaultValue={message}
+            onChange={(e) => {
+              setMessage(e.target.value);
+            }}
+          />
+          <Form.Control.Feedback type="invalid">
+            Please enter your requirement
+          </Form.Control.Feedback>
+        </Form.Group>
+
+        <Button type="submit">Submit form</Button>
+      </Form>
+    </div>
   );
 }
 
