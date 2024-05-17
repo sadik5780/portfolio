@@ -36,7 +36,7 @@ function Contact() {
       message,
     };
 
-    console.log(data);
+    // console.log(data);
 
     fetch("/api/form", {
       method: "POST",
@@ -47,9 +47,9 @@ function Contact() {
       body: JSON.stringify(data),
     })
       .then((res) => {
-        console.log("Response received");
+        // console.log("Response received");
         // if (res.status === 200) {
-        console.log("Response succeeded!");
+        // console.log("Response succeeded!");
         setSubmitted(true);
         router.push("/thank_you");
         // }
@@ -76,7 +76,7 @@ function Contact() {
                 <span>
                   <img src="/icon/phone.png" alt="" />
                 </span> 
-                &nbsp; 77 0909 5899
+                &nbsp; +91 7709 0958 99
               </p>
             </div>
             <h6 className="social_title">Follow me on:</h6>

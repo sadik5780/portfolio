@@ -1,3 +1,4 @@
+'use client';
 import Head from "next/head";
 import Script from "next/script";
 import React, { useEffect, useState } from "react";
@@ -8,8 +9,13 @@ function projectsDetail() {
   const [imageData, setImageData] = useState([]);
   // console.log(data[0].images);
   useEffect(() => {
-    setImageData(data);
-  }, [data]);
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
+      console.log("first")
+    })();
+    // setImageData(data);
+  }, []);
 
   return (
     <>
@@ -39,8 +45,8 @@ function projectsDetail() {
         />
       </Head>
       <div className="container">
-      <div className="row">
-          {imageData?.map((item, index) => {
+        <div className="row">
+          {/* {imageData?.map((item, index) => {
             console.log(item);
             return (
               <>
@@ -52,7 +58,22 @@ function projectsDetail() {
                 </div>
               </>
             );
-          })}
+          })} */}
+          <div className="col-lg-12">
+            <div className="custom_box"></div>
+          </div>
+          <div className="col-lg-12">
+            <div className="custom_box"></div>
+          </div>
+          <div className="col-lg-12">
+            <div className="custom_box"></div>
+          </div>
+          <div className="col-lg-12">
+            <div className="custom_box"></div>
+          </div>
+          <div className="col-lg-12">
+            <div className="custom_box"></div>
+          </div>
         </div>
       </div>
     </>

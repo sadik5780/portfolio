@@ -22,6 +22,8 @@
     "eslint": "8.42.0",
     "eslint-config-next": "13.4.5",
     "framer-motion": "^10.16.4",
+    "gsap": "^3.12.2",
+    "locomotive-scroll": "^4.1.4",
     "next": "13.4.5",
     "next-image-export-optimizer": "^1.7.0",
     "nodemailer": "^6.9.5",

@@ -1,17 +1,29 @@
-import Head from "next/head";
-import React, { useEffect, useState } from "react";
+'use client';
+import React, { useEffect, useState, useRef, useLayoutEffect } from "react";
+import Link from "next/link";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap";
 import "@splidejs/react-splide/css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Link from "next/link";
+import Head from "next/head";
 import Script from "next/script";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 
-export default function Home() {
+export default function Home() { 
+ 
+
   useEffect(() => {
-    AOS.init();
+    // AOS.init();
+    (
+      async () => {
+        const LocomotiveScroll = (await import('locomotive-scroll')).default;
+        const locomotiveScroll = new LocomotiveScroll();
+      }
+    )()
   }, []);
+
   const [menubar, setMenubar] = useState(false);
   const handleMenuBar = () => {
     setMenubar(false);
@@ -72,6 +84,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
+        
         <div className="hero_projects_slider animate__animated animate__fadeInUp">
           <Splide
             //   hasTrack={false}

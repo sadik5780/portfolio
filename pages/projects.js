@@ -4,12 +4,23 @@ import React, { useEffect, useState } from "react";
 import data from "../data.json";
 import Link from "next/link";
 
-function projects() {
+function Projects() {
   const [imageData, setImageData] = useState([]);
-  // console.log(data[0].images);
+
   useEffect(() => {
     setImageData(data);
-  }, [data]);
+  }, []);
+
+// Project List
+// 1. Shoeb Mashadi (shoebmashadi.com)
+// 2. Priyanka Kumari (ipriyankakumari.com)
+// 3. Accentuate Food Lab (accentuatefoodlab.com)
+// 4. Social Whistles Studio (socialwhistles.studio)
+// 5. Topbarter (topbarter.com)
+// 6. Febza Chairs (febzachairs.com)
+// 7. Energen Global FZC (energenglobalfzc.com)
+// 8. Dulheraja (dulheraja.co.in)
+// 9. Hotel New Punjab (hotelnewpunjab.com)
 
   return (
     <>
@@ -40,22 +51,17 @@ function projects() {
       </Head>
       <div className="container">
         <div className="row">
-          {imageData?.map((item, index) => {
-            console.log(item);
-            return (
-              <>
-                <div className="col-md-4">
-                  <Link href="/projectsDetail">
-                  <img src={item.images[index]} alt="" className="img-fluid" />
-                  </Link>
-                </div>
-              </>
-            );
-          })}
+          {imageData?.map((item, index) => (
+            <div key={index} className="col-md-4">
+              <Link href="/projectsDetail">
+                <img src={item.images[0]} alt="" className="img-fluid" />
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
     </>
   );
 }
 
-export default projects;
+export default Projects;
