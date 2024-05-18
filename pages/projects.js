@@ -21,6 +21,9 @@ function Projects() {
 // 7. Energen Global FZC (energenglobalfzc.com)
 // 8. Dulheraja (dulheraja.co.in)
 // 9. Hotel New Punjab (hotelnewpunjab.com)
+// 10.Etemaad Exim ()
+// 11.Door Step Body Massage ()
+// 12.Zamindar Township ()
 
   return (
     <>
