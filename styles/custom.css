@@ -172,28 +172,84 @@ ul {
   width: 30px;
 }
 
-.header .res_menu {
-  padding: 65px 40px 40px;
+/* .header .res_menu {
+  padding: 65px 10px 40px;
   background-color: #fff;
   box-shadow: -9px 12px 19px 0 #00000036;
   z-index: 10;
   position: fixed;
-  width: 50%;
+  width: 60%;
   height: 100%;
   top: 0;
-  right: 0%;
+  right: 0;
   background: #fff;
   z-index: 100;
-  overflow: auto;
-  transition: all 900ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  overflow: auto; 
+  -webkit-user-select: none;
+  user-select: none; 
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(0%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 .header .res_menu-active {
-  visibility: visible;
   opacity: 1;
-  right: 0;
-  transition: all 900ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  top: 0;
+  right: 0; 
+} */
+
+
+/* Keyframes for the slide-in animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
+
+/* Keyframes for the slide-out animation */
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.header .res_menu {
+  padding: 65px 20px 40px;
+  background-color: #fff;
+  box-shadow: -9px 12px 19px 0 #00000036;
+  z-index: 10;
+  position: fixed;
+  width: 60%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: #fff;
+  z-index: 100;
+  overflow: auto;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translateX(100%); /* Start off-screen */
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+.header .res_menu-active {
+  transform: translateX(0); /* Slide in */
+  animation: slideIn 0.5s forwards;
+}
+
+.header .res_menu-closing {
+  animation: slideOut 0.5s forwards;
+}
+
 
 .header .res_menu ul {
   padding: 0;
@@ -226,7 +282,7 @@ ul {
 .header .res_menu .close_btn {
   position: relative;
   top: -25px;
-  right: -25px;
+  right: 0px;
   cursor: pointer;
 }
 

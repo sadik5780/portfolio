@@ -63,7 +63,7 @@ function Contact() {
     <div className="container">
       <div className="row">
         <div className="col-lg-6">
-          <div className="contact_text_wrapper animate__animated animate__fadeInLeft">
+          <div className="contact_text_wrapper animate__animated animate__fadeInUp">
             <h1 className="title">Let's start a project together</h1>
             <div className="cont_details">
               <p>
@@ -111,7 +111,7 @@ function Contact() {
           </div>
         </div>
         <div className="col-lg-6">
-          <div className="form_wrapper animate__animated animate__fadeInRight">
+          <div className="form_wrapper animate__animated animate__fadeInUp">
             <h3 className="form_title">
               Need to get in contact or just want to send a message my way? Use
               this form:

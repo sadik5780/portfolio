@@ -6,14 +6,27 @@ import { useRouter } from "next/router";
 export default function Header() {
   const router = useRouter();
   const [menubar, setMenubar] = useState(false);
+  const [closing, setClosing] = useState(false);
 
   const handleMenuBar = () => {
-    setMenubar(!menubar);
+    if (menubar) {
+      setClosing(true);
+      setTimeout(() => {
+        setMenubar(false);
+        setClosing(false);
+      }, 500); // Duration of the slide-out animation
+    } else {
+      setMenubar(true);
+    }
   };
 
   useEffect(() => {
-    const handleRouteChange = () => { 
-      setMenubar(false);
+    const handleRouteChange = () => {
+      setClosing(true);
+      setTimeout(() => {
+        setMenubar(false);
+        setClosing(false);
+      }, 500); // Duration of the slide-out animation
     };
 
     router.events.on("routeChangeComplete", handleRouteChange);
@@ -63,8 +76,10 @@ export default function Header() {
               <span></span>
             </div>
             {menubar && (
-              <div className="res_menu animate__animated animate__fadeInRight"
-              key={menubar}>
+              <div
+                className={`res_menu ${closing ? "res_menu-closing" : "res_menu-active"}`}
+                key={menubar}
+              >
                 <div className="close_btn" onClick={handleMenuBar}></div>
                 <ul>
                   <li>
